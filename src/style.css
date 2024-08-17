@@ -1,3 +1,11 @@
+:root {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color: #FFAB6B;
+  --main-font: raleway;
+  --accent-font: 'STIX Two Text';
+}
+
 *,
 *::before,
 *::after {
@@ -7,6 +15,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  color: var(--text-color, #312A4E);
+  font-family: var(--main-font, sans-serif);
+  background-color: var(--bg-color, #F3EFEC);
 }
 
 p,
@@ -20,3 +31,84 @@ li,
 figure {
   margin: 0;
 }
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-viible,
+button:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+.heading {
+  font-family: var(--accent-color, serif);
+  font-weight: 600;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.content-section {
+  padding: 0 5vi;
+}
+
+.header {
+  padding-block-start: 10%;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-bottom: 40px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  padding-block: 20px;
+}
+
+.header__theme-toggler {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.header__theme-button {
+  position: relative;
+  border: none;
+  padding: 0;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  background-color: var(--accent-color);
+  inset-block-end: 0.3ch;
+  inset-inline-start: -4px;
+}
+

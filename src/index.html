@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -9,10 +9,34 @@
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="page theme_dark">
-    <header class="header"></header>
+    <header class="header">
+      <h1 class="header__title heading content-section">Карты подскажут</h1>
+      <nav class="header__menu content-section">
+        <div class="header__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
+            <use href="./images/logo.svg#logo"></use>
+          </svg>
+        </div>
+        <ul class="header__theme-toggler">
+          <li>
+            <button class="header__theme-button header__theme-button_type_dark">
+              Тёмная
+            </button>
+          </li>
+          <li>
+            <button
+              disabled
+              class="header__theme-button header__theme-button_type_light header__theme-button_is-active"
+            >
+              Светлая
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main class="content content-section"></main>
     <footer class="footer"></footer>
 
