@@ -1,14 +1,14 @@
 :root {
-  --bg-color: #F3EFEC;
-  --text-color: #312A4E;
-  --accent-color: #FFAB6B;
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
   --main-font: raleway;
   --accent-font: 'STIX Two Text';
 }
 
 .theme_dark {
   --bg-color: #171717;
-  --text-color: #B3B3B3;
+  --text-color: #b3b3b3;
   --accent-color: transparent;
 }
 
@@ -21,9 +21,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
-  color: var(--text-color, #312A4E);
+  color: var(--text-color, #312a4e);
   font-family: var(--main-font, sans-serif);
-  background-color: var(--bg-color, #F3EFEC);
+  background-color: var(--bg-color, #f3efec);
 }
 
 p,
@@ -141,7 +141,8 @@ button:disabled {
   color: inherit;
 }
 
-.content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+.content__text-block_type_first-lettered
+  .content__paragraph:first-of-type::first-letter {
   display: inline-block;
   margin-inline-end: 1px;
   padding: 0 4px;
@@ -150,7 +151,9 @@ button:disabled {
   background-color: var(--accent-color);
 }
 
-.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+.theme_dark
+  .content__text-block_type_first-lettered
+  .content__paragraph:first-of-type::first-letter {
   border: 1px solid currentColor;
 }
 
@@ -240,7 +243,7 @@ button:disabled {
   z-index: -1;
   inline-size: calc(100% + 8px);
   block-size: 0.5ch;
-  background-color: var(--accent-color, #FFAB6B);
+  background-color: var(--accent-color, #ffab6b);
   inset-block-end: 0.3ch;
   inset-inline-start: -4px;
 }
