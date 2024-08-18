@@ -59,7 +59,7 @@ function scripts() {
   return gulp
     .src('src/**/*.js')
     .pipe(plumber()) 
-    .pipe(concat('bundle.js')) 
+    .pipe(concatjs('bundle.js')) 
     .pipe(uglify())
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.reload({ stream: true }));
